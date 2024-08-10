@@ -12,63 +12,153 @@
     <title>Assignment-2</title>
     <link rel="stylesheet" href="style.css" />
     <style>
-        .main_container {
-          max-width: 80%;
-          margin: 0px auto;
-          margin-bottom: 0px;
-          color: white;
-          text-align: center;
-          margin-top: 80px;
-        }
-        main div img{
-              height: 150px;
-              width: 150px;
-              border-radius: 50%;
-              border: 3px solid #474747;
-          }
-        .img_grid{
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            justify-items: center;
-            gap: 10px;
-            margin: 8px;
-            padding: 5px;
-        }
-        main div p{
-          font-weight: normal;
-          font-size: 14px;
-          color: #757575;
-          margin-top: 10px;
-        }
-        .habits_text_section{
-          max-width: 600px;
-          margin: 0px auto;
-          margin-bottom: 50px;
-        }
-        main div h1{
-          font-size: 38px;
-          margin-bottom: 20px;
-        }
-        main div h4{
-            font-weight: normal;
-            margin-bottom: 0px;
-          }
-        @media screen and (max-width:576px) {
-          .img_grid {
-            grid-template-columns: repeat(1, 1fr);
-            max-width: 200px;
-            margin: 0px auto;
-          } 
-          .main_container{
-            margin-top: -30px;
-          } 
-          main div p{
-            max-width: 300px;
-            margin: 3px auto;
-            margin-bottom: 15px;
-        } 
-        }
+      .main_container {
+        max-width: 80%;
+        margin: 0px auto;
+        margin-bottom: 0px;
+        margin-top: 80px;
+      }
+      .main_container_section {
+        color: white;
+        text-align: center;
+      }
+      .main_container_section_1 {
+        color: white;
+      }
+      .main_div img {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        border: 3px solid #474747;
+      }
+      .img_grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin: 0px -10px 50px -10px;
+        padding: 5px;
+      }
+      main div p {
+        font-weight: normal;
+        font-size: 14px;
+        color: #757575;
+        margin-top: 10px;
+      }
+      .habits_text_section {
+        max-width: 600px;
+        margin: 0px auto;
+        margin-bottom: 50px;
+      }
+      main div h1 {
+        font-size: 38px;
+        margin-bottom: 20px;
+      }
+      main div h4 {
+        font-weight: normal;
+        margin-bottom: 0px;
+      }
+      .section_run {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        justify-items: center;
+        gap: 30px;
+        margin: 8px;
+        padding: 20px;
+      }
+      .run_section_bg {
+        background-color: #222222;
+        border-radius: 18px;
+      }
 
+      .run_pinture {
+        object-fit: none;
+        object-position: 65% 30%;
+        width: 440px;
+        height: 300px;
+        border-radius: 26px;
+        padding: 5px;
+      }
+      .run_text_design {
+        max-width: 400px;
+        margin: 0px auto;
+      }
+      .run_p {
+        margin-bottom: 50px;
+        margin-top: 40px;
+      }
+      .btn_run {
+        background-color: #a34400;
+        border: none;
+        color: aliceblue;
+        padding: 10px;
+        border-radius: 42px;
+        font-size: 18px;
+        width: 200px;
+      }
+      .bmi_section {
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-style: normal;
+        font-variation-settings: "slnt" 0;
+      }
+      .bmi_background {
+        background-color: #222222;
+        
+      }
+      .bmi_section p {
+        font-size: 15px;
+        font-weight: normal;
+        color: #474747;
+      }
+      .bmi_section h3 {
+        color: #ffffff;
+      }
+      .bmi_section h1 {
+        color: #ffffff;
+      }
+      .bmi_header{
+        max-width: 45%;
+        margin-left: 25%;
+      }
+    
+      @media screen and (max-width: 576px) {
+        .img_grid {
+          grid-template-columns: repeat(1, 1fr);
+          max-width: 200px;
+          margin: 0px auto;
+        }
+        .main_container {
+          margin-top: -30px;
+        }
+        main div p {
+          max-width: 305px;
+          margin: 3px auto;
+          margin-bottom: 15px;
+        }
+        .section_run {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+        }
+        .run_pinture {
+          max-width: 100%;
+          margin: 0px auto;
+          object-fit: cover;
+        }
+        .btn_run {
+          background-color: #a34400;
+          border: none;
+          color: aliceblue;
+          padding: 10px;
+          border-radius: 42px;
+          font-size: 18px;
+          width: 200px;
+          width: 300px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -127,36 +217,117 @@
       </div>
     </header>
     <main class="main_container inter-header">
-      <div class="habits_text_section">
+      <section class="main_container_section">
+        <div class="habits_text_section">
           <h1>Change Your Habits</h1>
           <p>
             We believe fitness should be accessible to everyone, everywhere,
             regardless of income or access to a gym.
           </p>
         </div>
-        <div class="img_grid">
-            <div>
-              <img src="images/image 3.png" alt="" />
-              <h4>Movement</h4>
-              <p>We believe fitness should be accessible to everyone</p>
-            </div>
-            <div>
-              <img src="images/image 2.png" alt="" />
-              <h4>Time</h4>
-              <p>We believe fitness should be accessible to everyone</p>
-            </div>
-            <div>
-              <img src="images/image 4.png" alt="" />
-              <h4>Practice</h4>
-              <p>We believe fitness should be accessible to everyone</p>
-            </div>
-            <div>
-              <img src="images/image 5.png" alt="" />
-              <h4>Weight Loss</h4>
-              <p>We believe fitness should be accessible to everyone</p>
-            </div>
+        <div class="img_grid main_div">
+          <div>
+            <img src="images/image 3.png" alt="" />
+            <h4>Movement</h4>
+            <p>We believe fitness should be accessible to everyone</p>
+          </div>
+          <div>
+            <img src="images/image 2.png" alt="" />
+            <h4>Time</h4>
+            <p>We believe fitness should be accessible to everyone</p>
+          </div>
+          <div>
+            <img src="images/image 4.png" alt="" />
+            <h4>Practice</h4>
+            <p>We believe fitness should be accessible to everyone</p>
+          </div>
+          <div>
+            <img src="images/image 5.png" alt="" />
+            <h4>Weight Loss</h4>
+            <p>We believe fitness should be accessible to everyone</p>
+          </div>
         </div>
+      </section>
+      <section class="main_container_section_1 run_section_bg">
+        <div class="section_run">
+          <div class="run_text_design">
+            <h1>
+              Run an Extra <br />
+              Mile Easily
+            </h1>
+            <p class="run_p">
+              We believe fitness should be accessible to everyone, everywhere,
+              regardless of income or access to a gym. With hundreds of
+              professional workouts
+            </p>
+            <button class="btn_run">Join No</button>
+          </div>
+          <div class="zoom_container">
+            <img class="run_pinture" src="images/run.jpg" alt="" />
+          </div>
+        </div>
+      </section>
     </main>
+    <section class="bmi_section">
+      <div>
+        <div class="bmi_header">
+          <h1>BMI Calculator</h1>
+          <p>
+            We believe fitness should be accessible to everyone, everywhere,
+            regardless of income or access to a gym.
+          </p>
+        </div>
+
+        <div class="bmi_background">
+          <div>
+            <h3>BMI Calculator Chart</h3>
+            <table>
+              <tr>
+                <th>BMI</th>
+                <th>Weight Status</th>
+              </tr>
+              <tr>
+                <td>Blow 18.5</td>
+                <td>nderweight</td>
+              </tr>
+              <tr>
+                <td>18.5 - 24.9</td>
+                <td>Healthy</td>
+              </tr>
+              <tr>
+                <td>25.0 - 29.9</td>
+                <td>Overweight</td>
+              </tr>
+              <tr>
+                <td>30.0 - and Above</td>
+                <td>Obese</td>
+              </tr>
+            </table>
+          </div>
+          <div>
+            <h3>Calculate your BMI</h3>
+            <p>
+              We believe fitness should be accessible to everyone, everywhere,
+              regardless of income or access to a gym.
+            </p>
+            <form>
+              <input type="text" placeholder="Height/cm" required />
+              <input type="text" placeholder="Weight/kg" required /><br />
+              <input type="text" placeholder="Age" required />
+              <select>
+                <option value="">Sex</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option></select
+              ><br />
+              <select>
+                <option value="">Select an activity factor</option>
+              </select><br>
+              <button type="submit">Calculate</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer></footer>
   </body>
 </html>
